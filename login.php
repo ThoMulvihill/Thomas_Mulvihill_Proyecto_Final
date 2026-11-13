@@ -26,9 +26,8 @@ if (empty($errores)){
     $stmt->execute(['email' => $email]);
     $usuario = $stmt->fetch();
 
-    if ($usuario !== false &&
-    password_verify($password, $usuario['password']) )
-    {
+    if ($usuario !== false && password_verify($password, $usuario['password']) ){
+        
         if($usuario['fecha_archivado'] !== NULL){
             $errores[]= "Tu cuenta ha sido archivada. Si crees que esto es un error o deseas reactivarla, por favor ponte en contacto con el administrador del sitio o el soporte técnico.";
         }else {
