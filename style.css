@@ -1,0 +1,212 @@
+/* ============================================================
+   1. VARIABLES (la paleta vive acá; cambiar un color = cambiarlo una vez)
+   ============================================================ */
+:root {
+    --fondo: #16130f;
+    --superficie: #221d17;
+    --superficie-2: #2c261e;
+    --borde: #3d3429;
+    --texto: #eadfc8;
+    --texto-suave: #a89d88;
+    --oro: #c9a24b;
+    --oro-claro: #e0bf6f;
+    --bronce: #8c6a3b;
+    --error: #d9645a;
+    --exito: #6fbf73;
+}
+
+/* ============================================================
+   2. BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: system-ui, "Segoe UI", sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+h1, h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--oro-claro);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--borde);
+}
+
+a { color: var(--oro); }
+a:hover { color: var(--oro-claro); }
+
+/* ============================================================
+   3. MENÚ DE NAVEGACIÓN
+   ============================================================ */
+nav {
+    background: var(--superficie);
+    border-bottom: 2px solid var(--bronce);
+}
+
+nav ul {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+nav a {
+    display: block;
+    padding: 16px 14px;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--oro-claro);
+    background: var(--superficie-2);
+}
+
+nav li:last-child { margin-left: auto; }   /* "Cerrar sesión" a la derecha */
+
+/* ============================================================
+   4. FORMULARIOS
+   ============================================================ */
+.formulario {
+    max-width: 460px;
+    margin: 32px auto;
+    padding: 28px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+}
+
+.formulario label {
+    display: block;
+    margin: 16px 0 6px;
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    background: var(--fondo);
+    color: var(--texto);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    font: inherit;
+}
+
+input:focus, select:focus {
+    outline: 2px solid var(--oro);
+    outline-offset: 1px;
+    border-color: var(--oro);
+}
+
+.buscador {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.buscador input { flex: 1; width: auto; }
+
+/* ============================================================
+   5. BOTONES
+   ============================================================ */
+button {
+    padding: 10px 18px;
+    background: var(--oro);
+    color: var(--fondo);
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover { background: var(--oro-claro); }
+
+.formulario button { width: 100%; margin-top: 22px; }
+
+button.peligro {
+    background: transparent;
+    color: var(--error);
+    border: 1px solid var(--error);
+}
+
+button.peligro:hover {
+    background: var(--error);
+    color: var(--fondo);
+}
+
+/* ============================================================
+   6. MENSAJES
+   ============================================================ */
+.errores {
+    padding: 12px 16px 12px 36px;
+    background: rgba(217, 100, 90, 0.12);
+    border-left: 4px solid var(--error);
+    border-radius: 6px;
+}
+
+.mensaje {
+    padding: 12px 16px;
+    background: rgba(111, 191, 115, 0.12);
+    border-left: 4px solid var(--exito);
+    border-radius: 6px;
+}
+
+/* ============================================================
+   7. TABLAS
+   ============================================================ */
+.tabla-scroll { overflow-x: auto; }   /* en pantallas chicas, la tabla se desliza */
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--superficie);
+}
+
+.tabla th {
+    padding: 14px 16px;
+    text-align: left;
+    background: var(--superficie-2);
+    color: var(--oro);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.tabla td {
+    padding: 14px 16px;
+    border-top: 1px solid var(--borde);
+}
+
+.tabla tbody tr:hover { background: var(--superficie-2); }
+
+.tabla form { display: inline; margin-left: 8px; }
+
+.estado-activo::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: var(--exito);
+}
