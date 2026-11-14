@@ -104,7 +104,7 @@ $usuarios = $stmt->fetchAll();
                     <a href="usuarios_editar.php?id=<?= (int) $user['id'] ?>">Editar</a>
 
                     <form method="POST" action="usuarios_archivar.php" onsubmit="return confirm('¿Archivar este usuario?');">
-                        <input type="hidden" name="id" value="<?= (int) $user['id'] ?>" class="peligro">
+                        <input type="hidden" name="id" value="<?= (int) $user['id'] ?>">
                         <button type="submit">Archivar</button>
                     </form>
                 </td>

@@ -42,7 +42,7 @@ if (!isset($_SESSION['usuario_id'])){
     <a href="coleccion_archivados.php">Ver apartadas</a>
 </p>
 
-<?php require_once __DIR__. "/coleccion.php"; ?>
+<?php require_once __DIR__. "/listado_monedas.php"; ?>
 
 </main> 
 </body>

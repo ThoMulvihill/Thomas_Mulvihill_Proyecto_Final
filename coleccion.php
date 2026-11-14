@@ -70,9 +70,9 @@ try{
                 <td><?= escapar($moneda['denominacion']) ?></td>
                 <td><?= escapar($moneda['anio']) ?></td>
                 <td><?= escapar($moneda['pais']) ?></td>
-                <td><?= escapar($moneda['metal']) ?? ''?></td>
-                <td><?= escapar($moneda['estado']) ?? ''?></td>
-                <td><?= escapar($moneda['descripcion']) ?? ''?></td>
+                <td><?= escapar($moneda['metal'] ?? '')?></td>
+                <td><?= escapar($moneda['estado'] ?? '')?></td>
+                <td><?= escapar($moneda['descripcion'] ?? '')?></td>
                 <td>
                     <a href="coleccion_editar.php?id=<?= (int) $moneda['id'] ?>">Editar</a>
 

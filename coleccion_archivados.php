@@ -98,7 +98,7 @@ $coleccion = $stmt->fetchAll();
 
                     <form method="POST" action="coleccion_reactivar.php" onsubmit="return confirm('Reactivar esta moneda?');">
                         <input type="hidden" name="id" value="<?= (int) $moneda['id'] ?>">
-                        <button type="submit" class="peligro">Reactivar</button>
+                        <button type="submit">Reactivar</button>
                     </form>
 
                     <form method="POST" action="coleccion_eliminar.php" onsubmit="return confirm('Eliminar esta moneda permanentemente?');">
