@@ -37,6 +37,12 @@ if (!isset($_SESSION['usuario_id'])){
 
 <h2>Mi colección de monedas</h2>
 
+<p>
+    <a href="coleccion_crear.php">+ Nueva moneda</a> |
+    <a href="coleccion_archivados.php">Ver apartadas</a>
+</p>
+
+<?php require_once __DIR__. "/coleccion.php"; ?>
 
 </main> 
 </body>

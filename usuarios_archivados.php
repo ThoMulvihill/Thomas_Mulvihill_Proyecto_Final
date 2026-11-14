@@ -96,7 +96,6 @@ $usuarios = $stmt->fetchAll();
                 <td><?= escapar($user['fecha_creacion']) ?></td>
                 <td><?= escapar($user['fecha_archivado']) ?></td>
                 <td>
-                    <a href="usuarios_editar.php?id=<?= (int) $user['id'] ?>">Editar</a>
 
                     <form method="POST" action="usuarios_reactivar.php" onsubmit="return confirm('Reactivar este usuario?');" class="peligro">
                         <input type="hidden" name="id" value="<?= (int) $user['id'] ?>">
