@@ -86,7 +86,7 @@ if (empty($errores)){
 
         <button type="submit">Iniciar sesion</button>
 
-        <p>¿No tenés cuenta? <a href="registro.php">Registrate</a></p>
+        <p><a href="registro.php">Registrate</a></p>
     </form>
 
 </main> 

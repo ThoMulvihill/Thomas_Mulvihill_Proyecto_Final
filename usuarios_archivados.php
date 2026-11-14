@@ -102,6 +102,11 @@ $usuarios = $stmt->fetchAll();
                         <input type="hidden" name="id" value="<?= (int) $user['id'] ?>">
                         <button type="submit">Reactivar</button>
                     </form>
+
+                    <form method="POST" action="usuarios_eliminar.php" onsubmit="return confirm('Eliminar este usuario permanentemente?');" class="peligro">
+                        <input type="hidden" name="id" value="<?= (int) $user['id'] ?>">
+                        <button type="submit">Eliminar</button>
+                    </form>
                 </td>
             </tr>
             <?php endforeach; ?>
